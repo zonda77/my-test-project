@@ -1,0 +1,52 @@
+name: "\U0001F41B Bug Report"
+description: Submit a bug report to help us improve
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit a bug report! 🐛
+        If this is not a bug related to the library directly, please use our [discord](https://discord.gg/s3KuuzsPFb) for questions.
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Please share your system configuration.
+      render: Shell
+      placeholder: |
+        OS: Ubuntu 22.04
+        Python: 3.10.12
+        ...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: information-scripts-examples
+    attributes:
+      label: Information
+      description: 'The problem arises when using:'
+      options:
+        - label: "One of the examples"
+        - label: "My own code"
+
+  - type: textarea
+    id: reproduction
+    validations:
+      required: true
+    attributes:
+      label: Reproduction
+      description: |
+        Please provide steps to reproduce the behavior, including code snippets and error messages.
+        Use code tags to format your code.
+      placeholder: |
+        Steps to reproduce:
+        1. Run `python script.py`
+        2. See error: `...`
+
+  - type: textarea
+    id: expected-behavior
+    validations:
+      required: true
+    attributes:
+      label: Expected behavior
+      description: "A clear and concise description of what you expected to happen."
